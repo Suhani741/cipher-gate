@@ -1,0 +1,102 @@
+# Codecov configuration
+# https://docs.codecov.com/docs/codecov-yaml
+
+codecov:
+  require_ci_to_pass: true
+  notify:
+    after_n_builds: 3
+    wait_for_ci: true
+
+comment:
+  layout: "reach, diff, flags, files"
+  behavior: default
+  require_changes: true
+  require_base: auto
+  require_head: true
+  branches: null
+  paths: []
+
+coverage:
+  precision: 2
+  round: down
+  range: "70...100"
+  status:
+    project:
+      default:
+        target: 80%
+        threshold: 1%
+        base: auto
+        if_not_found: success
+        if_ci_failed: error
+        if_no_uploads: error
+        only_pulls: false
+    patch:
+      default:
+        target: 80%
+        threshold: 1%
+        base: auto
+        if_not_found: success
+        if_ci_failed: error
+        if_no_uploads: error
+        only_pulls: true
+    changes: no
+
+ignore:
+  - "**/node_modules/**"
+  - "**/coverage/**"
+  - "**/tests/**"
+  - "**/mocks/**"
+  - "**/__mocks__/**"
+  - "**/*.test.js"
+  - "**/*.spec.js"
+  - "**/*.e2e.js"
+  - "**/index.js"
+  - "**/app.js"
+  - "**/server.js"
+  - "**/config/**"
+  - "**/client/**"
+  - "**/public/**"
+  - "**/build/**"
+  - "**/dist/**"
+  - "**/docs/**"
+  - "**/*.md"
+  - "**/*.json"
+  - "**/*.yaml"
+  - "**/*.yml"
+  - "**/.github/**"
+  - "**/.vscode/**"
+  - "**/.gitignore"
+  - "**/.env*"
+  - "**/*.log"
+
+parsers:
+  javascript:
+    enable_partials: true
+    enable_enhanced_watermarks: true
+    enable_network: true
+
+fixes:
+  - "server/::server/"
+  - "tests/::tests/"
+  - "coverage/::coverage/"
+
+flags:
+  server:
+    paths:
+      - server/
+    carryforward: true
+  client:
+    paths:
+      - client/src/
+    carryforward: true
+
+tests:
+  - integration
+  - unit
+  - e2e
+
+codecov:
+  require_ci_to_pass: true
+  notify:
+    after_n_builds: 3
+    wait_for_ci: true
