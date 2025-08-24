@@ -1,6 +1,5 @@
 # CipherGate - Secure File Sharing with AI Risk Scoring
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js Version](https://img.shields.io/badge/node-16.x%20%7C%7C%2018.x-brightgreen.svg)](https://nodejs.org/)
 [![MongoDB](https://img.shields.io/badge/MongoDB-4.4%2B-brightgreen.svg)](https://www.mongodb.com/)
 [![React](https://img.shields.io/badge/React-18.x-blue.svg)](https://reactjs.org/)
