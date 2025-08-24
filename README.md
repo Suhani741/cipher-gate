@@ -29,7 +29,7 @@ CipherGate is a secure file sharing platform with AI-powered risk assessment. It
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/cipher-gate.git
+   git clone https://github.com/Suhani741/cipher-gate.git
    cd cipher-gate
    ```
 
